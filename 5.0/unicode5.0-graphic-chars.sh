@@ -1,4 +1,5 @@
 #install fonts
+
 sudo apt-get install ^fonts-*
 
 mkdir ~/.fonts
@@ -12,7 +13,9 @@ unzip hanazono.zip *.ttf -d ~/.fonts/
 fc-cache -fv
 
 
+
 #extract graphic characters
+
 wget http://www.unicode.org/Public/5.0.0/ucd/UnicodeData.txt
 #gawk -F ';' '{ print $3; }' UnicodeData.txt | sort | uniq 
 
@@ -28,6 +31,7 @@ wc -l chars5.0.html
 #98884
 
 
+
 #generate HTML
 
 #gawk 'BEGIN { i = 0; w = 25; t = 40; f = 20; printf("<!DOCTYPE html>\n<html><head>\
@@ -35,7 +39,7 @@ gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 20; printf("<!DOCTYPE html>\n<html
 <meta charset=\"utf-8\" />\
 <style>\
 table { table-layout: fixed; width: %dpx; }\
-td { width: %dpx; height: %dpx; overflow: hidden; line-height: 0px;}\
+td { width: %dpx; height: %dpx; overflow: hidden; line-height: 0px; }\
 * { text-align: center; margin: 0px; padding: 0px; font-family: HanaMinA, HiraMinB; font-size: %dpt; }\
 </style><title>Unicode 5.0 Graphic Characters</title></head>\
 <body><table><tr>", (w + 1) * t, t, t, f); }\
@@ -46,4 +50,4 @@ print "</tr></table>\
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\
 <script src=\"unicode5.0-font-check.js\"></script>\
 </body></html>"; }' \
-chars5.0.html > unicode.html
+chars5.0.html > unicode5.0.html
