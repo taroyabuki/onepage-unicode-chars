@@ -19,7 +19,7 @@ $(document).ready(function(){
     */
 
     if (cellSize < width || cellSize < height) {
-      ch.css('font-size', Math.floor(fontSize * cellSize / (width < height ? height : width)) + 'pt');
+      ch.css('font-size', Math.floor(fontSize * cellSize / (1 + (width < height ? height : width))) + 'pt');
       width = Number(ch.css('width').slice(0, -2));
       height = Number(ch.css('height').slice(0, -2));
       if (cellSize < width || cellSize < height) {

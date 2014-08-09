@@ -13,6 +13,11 @@ unzip hanazono.zip *.ttf -d ~/.fonts/
 #for Windows
 wget https://collab.itc.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Unicode%20Fonts/Jomolhari-alpha003.zip
 
+#for Unicode 6.0 on Windows
+wget http://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip
+
+wget http://unifoundry.com/pub/unifont-7.0.03/font-builds/unifont-7.0.03.ttf
+
 wget http://users.teilar.gr/~g1951d/Symbola.zip
 
 fc-cache -fv
