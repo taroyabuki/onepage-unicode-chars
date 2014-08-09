@@ -1,19 +1,3 @@
-#install fonts
-
-sudo apt-get install ^fonts-*
-
-mkdir ~/.fonts
-
-wget http://www.google.com/get/noto/pkgs/Noto-hinted.zip
-unzip Noto-hinted.zip -x LICENSE -d ~/.fonts/
-
-wget "http://sourceforge.jp/frs/redir.php?m=iij&f=%2Fhanazono-font%2F60001%2Fhanazono-20131208.zip" -O hanazono.zip
-unzip hanazono.zip *.ttf -d ~/.fonts/
-
-fc-cache -fv
-
-
-
 #extract graphic characters
 
 wget http://www.unicode.org/Public/5.0.0/ucd/UnicodeData.txt
@@ -34,8 +18,9 @@ wc -l chars5.0.html
 
 #generate HTML
 
-#gawk 'BEGIN { i = 0; w = 25; t = 40; f = 20; printf("<!DOCTYPE html>\n<html><head>\
-gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 20; printf("<!DOCTYPE html>\n<html><head>\
+#gawk 'BEGIN { i = 0; w = 32; t = 40; f = 4; printf("<!DOCTYPE html>\n<html><head>\
+#gawk 'BEGIN { i = 0; w = 32; t = 40; f = 17; printf("<!DOCTYPE html>\n<html><head>\
+gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 17; printf("<!DOCTYPE html>\n<html><head>\
 <meta charset=\"utf-8\" />\
 <style>\
 table { table-layout: fixed; width: %dpx; }\
@@ -48,6 +33,6 @@ printf("<td id=\"u+%x\"><span>&#x%x;</span></td>", $1, $1); ++i; }\
 END { while (i % w != 0) { printf("<td></td>"); ++i; }\
 print "</tr></table>\
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\
-<script src=\"unicode5.0-font-check.js\"></script>\
+<script src=\"../font-check.js\"></script>\
 </body></html>"; }' \
 chars5.0.html > unicode5.0.html
