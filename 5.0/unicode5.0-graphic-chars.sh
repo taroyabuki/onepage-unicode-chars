@@ -19,8 +19,8 @@ wc -l chars5.0.html
 #generate HTML
 
 #gawk 'BEGIN { i = 0; w = 32; t = 40; f = 4; printf("<!DOCTYPE html>\n<html><head>\
-#gawk 'BEGIN { i = 0; w = 32; t = 40; f = 17; printf("<!DOCTYPE html>\n<html><head>\
-gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 17; printf("<!DOCTYPE html>\n<html><head>\
+#gawk 'BEGIN { i = 0; w = 32; t = 40; f = 16; printf("<!DOCTYPE html>\n<html><head>\
+gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 16; printf("<!DOCTYPE html>\n<html><head>\
 <meta charset=\"utf-8\" />\
 <style>\
 table { table-layout: fixed; width: %dpx; }\

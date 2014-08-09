@@ -1,5 +1,5 @@
 var cellSize = 40;
-var fontSize = 17;
+var fontSize = 16;
 
 $(document).ready(function(){
   $('td').each(function(){
@@ -14,7 +14,7 @@ $(document).ready(function(){
     /*
     if (width > 10) {
       $(this).css('background-color', 'red');
-      ch.css('font-size', '18pt');
+      ch.css('font-size', fontSize + 'pt');
     }
     */
 
