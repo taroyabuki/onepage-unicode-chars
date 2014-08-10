@@ -26,8 +26,9 @@ gawk 'BEGIN { i = 0; w = 384 - 1; t = 40; f = 16; printf("<!DOCTYPE html>\n<html
 table { table-layout: fixed; width: %dpx; }\
 td { width: %dpx; height: %dpx; overflow: hidden; line-height: 0px; }\
 * { text-align: center; margin: 0px; padding: 0px; font-family: HanaMinA, HiraMinB; font-size: %dpt; }\
+caption { font-family: \"Palatino Linotype\"; }\
 </style><title>Unicode 5.0 Graphic Characters</title></head>\
-<body><table><tr>", (w + 1) * t, t, t, f); }\
+<body><table><caption>Unicode 5.0 Graphic Characters</caption><tr>", (w + 1) * t, t, t, f); }\
 { if (i != 0 && i % w == 0) printf("</tr><tr>");\
 printf("<td id=\"u+%x\"><span>&#x%x;</span></td>", $1, $1); ++i; }\
 END { while (i % w != 0) { printf("<td></td>"); ++i; }\
