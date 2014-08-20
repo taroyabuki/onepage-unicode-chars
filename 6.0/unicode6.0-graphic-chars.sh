@@ -22,15 +22,15 @@ wc -l chars6.0.html
 
 #gawk 'BEGIN { i = 0; w = 32; t = 40; f = 16; printf("<!DOCTYPE html>\n<html><head>\
 #gawk 'BEGIN { i = 0; w = 32; t = 40; f = 4; printf("<!DOCTYPE html>\n<html><head>\
-gawk 'BEGIN { i = 0; w = 400 - 1; t = 40; f = 16; printf("<!DOCTYPE html>\n<html><head>\
+gawk 'BEGIN { i = 0; w = 331; t = 40; f = 16; printf("<!DOCTYPE html>\n<html><head>\
 <meta charset=\"utf-8\" />\
 <style>\
-table { table-layout: fixed; width: %dpx; }\
-td { width: %dpx; height: %dpx; overflow: hidden; line-height: 0px; }\
+table { table-layout: fixed; width: %dpx; border-collapse:collapse; }\
+td { width: %dpx; height: %dpx; overflow: hidden; line-height: 0px; border:solid black 1px; }\
 * { text-align: center; margin: 0px; padding: 0px; font-family: HanaMinA, HiraMinB; font-size: %dpt; }\
 caption { font-family: \"Palatino Linotype\"; }\
 </style><title>Unicode 6.0 Graphic Characters</title></head>\
-<body><table><caption>Unicode 6.0 Graphic Characters</caption><tr>", (w + 1) * t, t, t, f); }\
+<body><table><tr>", w * t, t, t, f); }\
 { if (i != 0 && i % w == 0) printf("</tr><tr>");\
 printf("<td id=\"u+%x\"><span>&#x%x;</span></td>", $1, $1); ++i; }\
 END { while (i % w != 0) { printf("<td></td>"); ++i; }\
