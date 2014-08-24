@@ -20,4 +20,7 @@ Firefox on Windowsで印刷する。
 
 ## 課題
 
-* サイズを正しく取れず、枠にうまく納められない文字がある。
+サイズを正しく取れず、枠にうまく納められない文字がある。
+
+* U+0dda（Iskoola Pota）
+* U+a9bcのあたり（Noto Sans Javanese）

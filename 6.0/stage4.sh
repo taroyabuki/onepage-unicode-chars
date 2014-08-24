@@ -1,1 +1,1 @@
-pdftoppm -mono -r 600 onepage-unicode6.0.pdf > unicode.pbm
+pdftoppm -mono -r 600 unicode.pdf > unicode.pbm

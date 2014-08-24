@@ -24,7 +24,7 @@ $(document).ready(function() {
     var newFontSize = fontSize;
     if (cellSize - 1 < size) {
       newFontSize = Math.floor(fontSize * (cellSize - 1) / size);
-      ch.css('font-size', newFontSize + 'px');
+      //ch.css('font-size', newFontSize + 'px');
       /*
       width = Number(ch.css('width').slice(0, -2));
       height = Number(ch.css('height').slice(0, -2));
