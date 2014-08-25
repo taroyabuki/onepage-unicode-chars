@@ -2,7 +2,8 @@
 
 wget http://www.unicode.org/Public/5.2.0/ucd/UnicodeData.txt
 #gawk -F ';' '{ print $3; }' UnicodeData.txt | sort | uniq 
- 
+#gawk -F ';' '{ print $3; }' UnicodeData.txt | sort | uniq -c
+
 gawk -F ';' '$3!~/^(C|Z[lp])/ { printf("%d\n", strtonum("0x" $1)); } END {\
 for (i = 0x3400; i < 0x4db5 - 1; ++i) { printf("%d\n", i + 1); } #CJK Ext.A\
 for (i = 0x4e00; i < 0x9fcb - 1; ++i) { printf("%d\n", i + 1); } #CJK\
